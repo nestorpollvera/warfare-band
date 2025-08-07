@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warfare - Imágenes</title>
-    <!-- Enlace a Tailwind CSS CDN para estilos de utilidad -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Enlace a la hoja de estilos personalizada (ruta relativa desde pages/) -->
+    <!-- Enlace al archivo CSS básico -->
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
-<body class="flex flex-col min-h-screen">
+<body>
     <!-- Encabezado y Barra de Navegación -->
-    <header class="bg-black text-white p-4 shadow-lg">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <!-- Logo de la banda (ruta relativa desde pages/) -->
-            <a href="../index.html" class="flex items-center space-x-4 mb-4 md:mb-0">
-                <img src="../multi/Photoroom_20250702_172029.JPG" alt="Warfare Logo" class="h-16 w-auto rounded-md" onerror="this.onerror=null;this.src='https://placehold.co/100x100/333/fff?text=Warfare+Logo';">
-                <span class="text-4xl font-bold tracking-widest uppercase text-red-500">WARFARE</span>
+    <header class="header">
+        <div class="contenedor header-content">
+            <!-- Logo de la banda -->
+            <a href="../index.html" class="logo-link">
+                <img src="../multi/Photoroom_20250702_172029.JPG" alt="Warfare Logo" class="logo-img" onerror="this.onerror=null;this.src='https://placehold.co/100x100/333/fff?text=Warfare+Logo';">
+                <span class="logo-text">WARFARE</span>
             </a>
-            <nav class="mt-4 md:mt-0">
-                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg">
+            <nav class="navegacion">
+                <ul class="nav-list">
                     <li><a href="../index.html" class="nav-link">Inicio</a></li>
                     <li><a href="music.html" class="nav-link">Música</a></li>
                     <li><a href="images.html" class="nav-link">Imágenes</a></li>
@@ -31,66 +29,66 @@
     </header>
 
     <!-- Contenido Principal -->
-    <main class="flex-grow container mx-auto p-6 md:p-10">
-        <section class="text-center mb-12">
-            <h2 class="text-5xl md:text-6xl font-extrabold mb-6 text-red-500 uppercase">La Guerra Visual</h2>
-            <p class="text-xl md:text-2xl mb-8">Momentos capturados de nuestros conciertos y sesiones. ¡Prepárense para la invasión visual!</p>
+    <main class="main-content contenedor">
+        <section class="section-header">
+            <h2>La Guerra Visual</h2>
+            <p>Momentos capturados de nuestros conciertos y sesiones. ¡Prepárense para la invasión visual!</p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-gray-800 rounded-lg overflow-hidden">
+            <div class="gallery-grid">
+                <div class="gallery-item">
                     <img src="../multi/0018162942_10.jpg" alt="Warfare en concierto" class="gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/fff?text=Imagen+1';">
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Energía en el Escenario</p>
-                        <p class="text-sm text-gray-400">Concierto en vivo</p>
+                    <div class="gallery-caption">
+                        <p>Energía en el Escenario</p>
+                        <p class="texto-secundario">Concierto en vivo</p>
                     </div>
                 </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                <div class="gallery-item">
                     <img src="../multi/337404342_3414574722163198_7114721408616735319_n-4.jpg" alt="Poster de Destruction y Warfare" class="gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/fff?text=Imagen+2';">
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Latin Tour 2023</p>
-                        <p class="text-sm text-gray-400">Junto a Destruction</p>
+                    <div class="gallery-caption">
+                        <p>Latin Tour 2023</p>
+                        <p class="texto-secundario">Junto a Destruction</p>
                     </div>
                 </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                <div class="gallery-item">
                     <img src="../multi/3540461501_photo.jpg" alt="Warfare - Foto de la banda" class="gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/fff?text=Imagen+3';">
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">La Banda</p>
-                        <p class="text-sm text-gray-400">Sesión de fotos oficial</p>
+                    <div class="gallery-caption">
+                        <p>La Banda</p>
+                        <p class="texto-secundario">Sesión de fotos oficial</p>
                     </div>
                 </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                <div class="gallery-item">
                     <img src="../multi/20221221070951_metal2.jpg" alt="Warfare en concierto con luces verdes" class="gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/fff?text=Imagen+4';">
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Show en vivo</p>
-                        <p class="text-sm text-gray-400">Poder en el escenario</p>
+                    <div class="gallery-caption">
+                        <p>Show en vivo</p>
+                        <p class="texto-secundario">Poder en el escenario</p>
                     </div>
                 </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                <div class="gallery-item">
                     <img src="../multi/images (1).jpeg" alt="Poster de Metralla y Warfare" class="gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/fff?text=Imagen+5';">
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Reunión 2025</p>
-                        <p class="text-sm text-gray-400">Junto a Metralla</p>
+                    <div class="gallery-caption">
+                        <p>Reunión 2025</p>
+                        <p class="texto-secundario">Junto a Metralla</p>
                     </div>
                 </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                <div class="gallery-item">
                     <img src="../multi/images (2).jpeg" alt="Poster de Kodos y Warfare" class="gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/fff?text=Imagen+6';">
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Kodos Producciones</p>
-                        <p class="text-sm text-gray-400">Show Latino</p>
+                    <div class="gallery-caption">
+                        <p>Kodos Producciones</p>
+                        <p class="texto-secundario">Show Latino</p>
                     </div>
                 </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                <div class="gallery-item">
                     <img src="../multi/images (3).jpeg" alt="Poster de Warfest y Warfare" class="gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/fff?text=Imagen+7';">
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Warfest Vol. 1</p>
-                        <p class="text-sm text-gray-400">Locomotora del Infierno</p>
+                    <div class="gallery-caption">
+                        <p>Warfest Vol. 1</p>
+                        <p class="texto-secundario">Locomotora del Infierno</p>
                     </div>
                 </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                <div class="gallery-item">
                     <img src="../multi/images.jpeg" alt="Warfare en concierto con luces azules" class="gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/fff?text=Imagen+8';">
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Siluetas en el Escenario</p>
-                        <p class="text-sm text-gray-400">Pura energía</p>
+                    <div class="gallery-caption">
+                        <p>Siluetas en el Escenario</p>
+                        <p class="texto-secundario">Pura energía</p>
                     </div>
                 </div>
             </div>
@@ -98,18 +96,18 @@
     </main>
 
     <!-- Pie de Página -->
-    <footer class="bg-black text-gray-400 p-6 text-center mt-auto">
-        <div class="container mx-auto">
+    <footer class="footer">
+        <div class="contenedor">
             <p>&copy; 2025 Warfare. Todos los derechos reservados. | Diseñado para la aniquilación.</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="https://www.facebook.com/warfareofficial/?locale=es_LA" target="_blank" class="hover:text-white transition-colors duration-300">
-                    <img src="https://img.icons8.com/ios-filled/50/FA5252/facebook-new.png" alt="Facebook Icon" class="w-8 h-8">
+            <div class="footer-social-links">
+                <a href="https://www.facebook.com/warfareofficial/?locale=es_LA" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/FA5252/facebook-new.png" alt="Facebook Icon">
                 </a>
-                <a href="https://www.instagram.com/warfare.band/" target="_blank" class="hover:text-white transition-colors duration-300">
-                    <img src="https://img.icons8.com/ios-filled/50/FA5252/instagram-new.png" alt="Instagram Icon" class="w-8 h-8">
+                <a href="https://www.instagram.com/warfare.band/" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/FA5252/instagram-new.png" alt="Instagram Icon">
                 </a>
-                <a href="https://www.youtube.com/@Warfare-kk6oc" target="_blank" class="hover:text-white transition-colors duration-300">
-                    <img src="https://img.icons8.com/ios-filled/50/FA5252/youtube-play.png" alt="YouTube Icon" class="w-8 h-8">
+                <a href="https://www.youtube.com/@Warfare-kk6oc" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/FA5252/youtube-play.png" alt="YouTube Icon">
                 </a>
             </div>
         </div>

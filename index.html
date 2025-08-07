@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warfare - Thrash Metal</title>
-    <!-- Enlace a Tailwind CSS CDN para estilos de utilidad -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Enlace a la hoja de estilos personalizada (ruta relativa desde index.html) -->
+    <!-- Enlace al archivo CSS básico -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body class="flex flex-col min-h-screen">
+<body>
     <!-- Encabezado y Barra de Navegación -->
-    <header class="bg-black text-white p-4 shadow-lg">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <!-- Logo de la banda (ruta relativa desde index.html) -->
-            <a href="index.html" class="flex items-center space-x-4 mb-4 md:mb-0">
-                <img src="multi/Photoroom_20250702_172029.JPG" alt="Warfare Logo" class="h-16 w-auto rounded-md" onerror="this.onerror=null;this.src='https://placehold.co/100x100/333/fff?text=Warfare+Logo';">
-                <span class="text-4xl font-bold tracking-widest uppercase text-red-500">WARFARE</span>
+    <header class="header">
+        <div class="contenedor header-content">
+            <!-- Logo de la banda -->
+            <a href="index.html" class="logo-link">
+                <img src="multi/Photoroom_20250702_172029.JPG" alt="Warfare Logo" class="logo-img" onerror="this.onerror=null;this.src='https://placehold.co/100x100/333/fff?text=Warfare+Logo';">
+                <span class="logo-text">WARFARE</span>
             </a>
-            <nav class="mt-4 md:mt-0">
-                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg">
+            <nav class="navegacion">
+                <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Inicio</a></li>
                     <li><a href="pages/music.html" class="nav-link">Música</a></li>
                     <li><a href="pages/images.html" class="nav-link">Imágenes</a></li>
@@ -31,30 +29,30 @@
     </header>
 
     <!-- Contenido Principal -->
-    <main class="flex-grow container mx-auto p-6 md:p-10">
-        <section class="text-center mb-12">
-            <h2 class="text-5xl md:text-6xl font-extrabold mb-6 text-red-500 uppercase leading-tight">¡El Thrash Metal te golpea!</h2>
-            <p class="text-xl md:text-2xl mb-8">Bienvenidos al sitio oficial de Warfare. Prepárense para la aniquilación sonora.</p>
-            <img src="multi/0018162942_10.jpg" alt="Warfare en concierto" class="w-full max-w-4xl mx-auto rounded-lg shadow-xl mb-8" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/333/fff?text=Warfare+en+Concierto';">
-            <a href="pages/music.html" class="btn-primary inline-block">Escucha Nuestra Música</a>
+    <main class="main-content contenedor">
+        <section class="section-header">
+            <h2>¡El Thrash Metal te golpea!</h2>
+            <p>Bienvenidos al sitio oficial de Warfare. Prepárense para la aniquilación sonora.</p>
+            <img src="multi/0018162942_10.jpg" alt="Warfare en concierto" class="image-hero" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/333/fff?text=Warfare+en+Concierto';">
+            <a href="pages/music.html" class="btn-primary">Escucha Nuestra Música</a>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 class="text-3xl font-bold mb-4 text-red-400">Últimas Noticias</h3>
-                <p class="mb-4">¡Nuestro nuevo álbum "Annihilation" ya está disponible en todas las plataformas! Gracias a todos por su increíble apoyo.</p>
-                <p class="text-sm text-gray-400">Publicado el 25 de Julio, 2025</p>
+        <section class="grid-container">
+            <div class="card">
+                <h3>Últimas Noticias</h3>
+                <p>¡Nuestro nuevo álbum "Annihilation" ya está disponible en todas las plataformas! Gracias a todos por su increíble apoyo.</p>
+                <p class="texto-secundario">Publicado el 25 de Julio, 2025</p>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 class="text-3xl font-bold mb-4 text-red-400">Próximos Eventos</h3>
-                <p class="mb-4">¡Nos vemos en el "Metal Mayhem Fest" el 15 de Agosto! Preparen sus cuellos para el headbanging.</p>
-                <p class="text-sm text-gray-400">Más detalles en la sección <a href="pages/tour.html" class="text-red-400 hover:underline">Tour</a>.</p>
+            <div class="card">
+                <h3>Próximos Eventos</h3>
+                <p>¡Nos vemos en el "Metal Mayhem Fest" el 15 de Agosto! Preparen sus cuellos para el headbanging.</p>
+                <p class="texto-secundario">Más detalles en la sección <a href="pages/tour.html" class="nav-link">Tour</a>.</p>
             </div>
         </section>
 
-        <section class="text-center mb-12">
-            <h3 class="text-4xl font-bold mb-6 text-red-500">Acerca de Warfare</h3>
-            <p class="text-lg leading-relaxed max-w-3xl mx-auto mb-8">
+        <section class="about-section">
+            <h3>Acerca de Warfare</h3>
+            <p>
                 Warfare es una banda de Thrash Metal originaria de Río Grande, Tierra del Fuego.
                 Desde el 2019 activa, con variadas presentaciones en el ámbito local y fuera de la provincia y el país
                 como ser el caso del Obituario Sur junto a Reinará la Tempestad, en la ciudad de Río Gallegos, en la
@@ -62,8 +60,8 @@
                 Contamos con un demo/ep del año 2019 y nuestro LP del 2023 "Respiro Venganza".
                 El estilo es Thrash Metal, influenciado desde Judas Priest hasta Exodus.
             </p>
-            <h3 class="text-3xl font-bold mb-4 text-red-500">Integrantes</h3>
-            <ul class="text-lg leading-relaxed max-w-xl mx-auto list-disc list-inside">
+            <h3>Integrantes</h3>
+            <ul>
                 <li>Sebastián Martín - Voz</li>
                 <li>Alejandro Santome - Guitarra</li>
                 <li>Néstor Poll Vera - Bajo</li>
@@ -73,18 +71,18 @@
     </main>
 
     <!-- Pie de Página -->
-    <footer class="bg-black text-gray-400 p-6 text-center mt-auto">
-        <div class="container mx-auto">
+    <footer class="footer">
+        <div class="contenedor">
             <p>&copy; 2025 Warfare. Todos los derechos reservados. | Diseñado para la aniquilación.</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="https://www.facebook.com/warfareofficial/?locale=es_LA" target="_blank" class="hover:text-white transition-colors duration-300">
-                    <img src="https://img.icons8.com/ios-filled/50/FA5252/facebook-new.png" alt="Facebook Icon" class="w-8 h-8">
+            <div class="footer-social-links">
+                <a href="https://www.facebook.com/warfareofficial/?locale=es_LA" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/FA5252/facebook-new.png" alt="Facebook Icon">
                 </a>
-                <a href="https://www.instagram.com/warfare.band/" target="_blank" class="hover:text-white transition-colors duration-300">
-                    <img src="https://img.icons8.com/ios-filled/50/FA5252/instagram-new.png" alt="Instagram Icon" class="w-8 h-8">
+                <a href="https://www.instagram.com/warfare.band/" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/FA5252/instagram-new.png" alt="Instagram Icon">
                 </a>
-                <a href="https://www.youtube.com/@Warfare-kk6oc" target="_blank" class="hover:text-white transition-colors duration-300">
-                    <img src="https://img.icons8.com/ios-filled/50/FA5252/youtube-play.png" alt="YouTube Icon" class="w-8 h-8">
+                <a href="https://www.youtube.com/@Warfare-kk6oc" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/FA5252/youtube-play.png" alt="YouTube Icon">
                 </a>
             </div>
         </div>
