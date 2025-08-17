@@ -1,0 +1,411 @@
+/* Variables */
+$color-primario: #ef4444;
+$color-secundario: #fca5a5;
+$color-fondo-oscuro: #000;
+$color-fondo-claro: #e0e0e0;
+$color-texto-oscuro: #1a1a1a;
+$color-texto-secundario: #4b5563;
+$color-card-fondo: #fff;
+$color-hover-nav: #ef4444;
+$color-hover-btn: #dc2626;
+
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: $color-fondo-claro;
+    color: $color-texto-oscuro;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.texto-secundario {
+    color: $color-texto-secundario;
+}
+
+/* Header y Navegación */
+.header {
+    background-color: $color-fondo-oscuro;
+    color: $color-card-fondo;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-link img {
+            height: 4rem;
+            width: auto;
+            border-radius: 0.5rem;
+            margin-right: 1rem;
+        }
+
+        .logo-text {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: $color-primario;
+        }
+
+        .navegacion {
+            margin-top: 1rem;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            font-size: 1.125rem;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $color-hover-nav;
+            }
+        }
+    }
+}
+
+/* Contenido Principal */
+.main-content {
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $color-texto-oscuro;
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        color: $color-primario;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.image-hero {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: $color-primario;
+    color: $color-card-fondo;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $color-hover-btn;
+    }
+}
+
+/* Flexbox y Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background-color: $color-card-fondo;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h3 {
+        font-size: 1.875rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: $color-primario;
+    }
+}
+
+.about-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $color-texto-oscuro;
+
+    h3 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: $color-primario;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+    }
+
+    ul {
+        list-style: disc;
+        list-style-position: inside;
+        text-align: left;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.about-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.spotify-embed-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.spotify-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    background-color: $color-card-fondo;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery-caption {
+    padding: 1rem;
+    color: $color-texto-oscuro;
+}
+
+.gallery-caption p:first-child {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.gallery-caption p:last-child {
+    font-size: 0.875rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    background-color: $color-card-fondo;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.tour-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: $color-texto-oscuro;
+
+    th, td {
+        padding: 1rem;
+        border-bottom: 1px solid #d1d5db;
+        text-align: left;
+    }
+
+    th {
+        background-color: #e5e7eb;
+        color: $color-primario;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    tr:hover {
+        background-color: #f3f4f6;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+}
+
+.tour-table td a {
+    color: $color-primario;
+    text-decoration: underline;
+}
+
+.form-container {
+    max-width: 576px;
+    margin: 0 auto;
+    background-color: $color-card-fondo;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-field {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: $color-texto-oscuro;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    color: $color-texto-oscuro;
+
+    &:focus {
+        outline: none;
+        border-color: $color-primario;
+        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5);
+    }
+}
+
+.btn-submit {
+    background-color: $color-primario;
+    color: $color-card-fondo;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $color-hover-btn;
+    }
+}
+
+.contact-info {
+    margin-top: 2.5rem;
+    font-size: 1.125rem;
+    color: $color-texto-oscuro;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.footer {
+    background-color: $color-fondo-oscuro;
+    color: $color-texto-secundario;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    a img {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* Media Queries para diseño responsive */
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .logo-link {
+        margin-bottom: 0;
+        flex-direction: row;
+        text-align: left;
+    }
+    .nav-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 0;
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .contenedor {
+        padding: 2.5rem;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
