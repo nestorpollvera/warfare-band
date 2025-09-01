@@ -1,0 +1,20 @@
+// Mixin para Flexbox
+@mixin flex-center-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// Mixin para Flexbox en fila (escritorio)
+@mixin flex-between-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Mixin para transiciones
+@mixin transicion($propiedad) {
+    transition: $propiedad 0.3s ease;
+}

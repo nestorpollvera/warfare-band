@@ -1,127 +1,8 @@
-/* Variables */
-$color-primario: #ef4444;
-$color-secundario: #fca5a5;
-$color-fondo-oscuro: #000;
-$color-fondo-claro: #e0e0e0;
-$color-texto-oscuro: #1a1a1a;
-$color-texto-claro: #fff;
-$color-texto-secundario: #4b5563;
-$color-card-fondo: #fff;
-$color-card-hover: #f3f4f6;
-
-// Transiciones
-$transicion-default: all 0.3s ease;
-
-/* Estilos generales */
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: $color-fondo-claro;
-    color: $color-texto-oscuro;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
-
-.contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem;
-}
-
-.texto-secundario {
-    color: $color-texto-secundario;
-}
-
-/* Header y Navegación */
-.header {
-    background-color: $color-fondo-oscuro;
-    color: $color-texto-claro;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    .header-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 1200px;
-    }
-
-    .logo-link {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-        text-decoration: none;
-    }
-
-    .logo-link img {
-        height: 8rem; // Tamaño del logo corregido
-        width: auto;
-        border-radius: 0.5rem;
-        margin-right: 1rem;
-    }
-
-    .logo-text {
-        font-size: 2.25rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: $color-primario;
-    }
-
-    .navegacion {
-        margin-top: 1rem;
-    }
-
-    .nav-list {
-        list-style: none;
-        display: flex;
-        flex-direction: column; // Vista mobile
-        flex-wrap: wrap;
-        padding: 0;
-        margin: 0;
-        justify-content: center;
-        font-size: 1.125rem;
-        gap: 0.5rem; // Ajuste para mobile (480px)
-    }
-
-    .nav-link {
-        text-decoration: none;
-        color: inherit;
-        @include transicion(color);
-        &:hover {
-            color: $color-hover-nav;
-        }
-    }
-}
-
-/* Contenido Principal */
-.main-content {
-    flex-grow: 1;
-    padding: 1.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: $color-texto-oscuro;
-
-    h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        margin-bottom: 1.5rem;
-        color: $color-primario;
-        text-transform: uppercase;
-    }
-
-    p {
-        font-size: 1.25rem;
-        margin-bottom: 2rem;
+.btn-primary {
+    @extend %btn-base;
+    @include transicion(background-color);
+    &:hover {
+        background-color: $color-hover-btn;
     }
 }
 
@@ -133,20 +14,11 @@ body {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.btn-primary {
-    @extend %btn-base;
-    @include transicion(background-color);
-    &:hover {
-        background-color: $color-hover-btn;
-    }
-}
-
-/* Flexbox y Grid */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    margin: 0 auto 3rem;
+    margin-bottom: 3rem;
     
     @media (min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
@@ -376,45 +248,5 @@ body {
             width: 2rem;
             height: 2rem;
         }
-    }
-}
-
-/* Media Queries para diseño responsive */
-@media (max-width: 767px) {
-    .header-content {
-        flex-direction: column;
-    }
-    .nav-list {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-}
-@media (min-width: 768px) {
-    .header-content {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .logo-link {
-        margin-bottom: 0;
-    }
-    .nav-list {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        margin-top: 0;
-    }
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (min-width: 1024px) {
-    .contenedor {
-        padding: 2.5rem;
-    }
-    .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
